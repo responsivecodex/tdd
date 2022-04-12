@@ -1,0 +1,22 @@
+{
+	"image": "responsivecodex/java-nodejs-angular:1.0.0",
+	"mounts": ["source=${localWorkspaceFolder},target=/usr/src,type=bind,consistency=cached"],
+	"remoteUser": "root",
+	"workspaceFolder": "/usr/src",
+	"forwardPorts": [
+	3030
+	],
+	"postStartCommand": "whoami",
+	"extensions": [
+		"vscjava.vscode-java-pack",
+		"pivotal.vscode-boot-dev-pack",
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-rename-tag",
+		"sibiraj-s.vscode-scss-formatter"
+	],
+	"containerEnv": {
+		"javax.net.ssl.trustStore": "",
+		"javax.net.ssl.trustStorePassword": ""
+	},
+	"runArgs": ["--privileged"]
+}
